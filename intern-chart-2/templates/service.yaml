@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: intern-2
+  labels:
+    run: intern-2
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  type: NodePort
+  selector:
+    run: intern-2

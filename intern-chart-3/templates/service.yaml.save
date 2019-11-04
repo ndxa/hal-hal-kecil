@@ -1,12 +1,12 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: intern-3-svc
+  name: intern-3
   labels:
     run: intern-3
 spec:
-  type: NodePort
+  ports:
+  - port: 80
+    protocol: TCP
   selector:
     run: intern-3
-  ports:
-    - port: 80

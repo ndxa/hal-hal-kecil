@@ -1,13 +1,13 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
-  name: intern-2
+  name: intern-2-svc
   labels:
     run: intern-2
 spec:
-  ports:
-  - port: 80
-    protocol: TCP
   type: NodePort
   selector:
     run: intern-2
+  ports:
+    - port: 80
+      targetPort: 80
